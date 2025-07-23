@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Heritage by Standard Gold Exchange</title>
+
+        <!-- Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Merriweather:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Animate On Scroll (AOS) CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <!-- Brand Theme Styles -->
+        <style>
+            :root {
+                --background: #ffffff;
+                --foreground: #231f20;
+                --card: #ffffff;
+                --card-foreground: #231f20;
+                --popover: #ffffff;
+                --popover-foreground: #231f20;
+                --primary: #9f7e54;
+                --primary-foreground: #ffffff;
+                --secondary: #f8f6f3;
+                --secondary-foreground: #231f20;
+                --muted: #f5f3f0;
+                --muted-foreground: #6b6b6b;
+                --accent: #9f7e54;
+                --accent-foreground: #ffffff;
+                --destructive: #dc2626;
+                --destructive-foreground: #ffffff;
+                --border: #e8e4de;
+                --input: #e8e4de;
+                --ring: #9f7e54;
+                --font-sans: "Merriweather", Georgia, serif;
+                --font-serif: "Sibila", "Merriweather", Georgia, serif;
+            }
+
+            .dark {
+                --background: #231f20;
+                --foreground: #f5f3f0;
+                --card: #2a2a2a;
+                --card-foreground: #f5f3f0;
+                --popover: #1a1a1a;
+                --popover-foreground: #f5f3f0;
+                --primary: #9f7e54;
+                --primary-foreground: #ffffff;
+                --secondary: #2a2a2a;
+                --secondary-foreground: #f5f3f0;
+                --muted: #3a3a3a;
+                --muted-foreground: #888888;
+                --accent: #9f7e54;
+                --accent-foreground: #ffffff;
+                --destructive: #dc2626;
+                --destructive-foreground: #ffffff;
+                --border: #3a3a3a;
+                --input: #3a3a3a;
+                --ring: #9f7e54;
+            }
+
+            /* Subtle background texture for the hero background layer */
+            .textured-bg-layer {
+                background-color: var(--background);
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233a3a3a' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            }
+        </style>
+    </head>
+
+    <body
+        class="bg-[var(--background)] text-[var(--foreground)] font-serif antialiased"
+    >
+        <main>
+            <!-- HERO SECTION -->
+            <section
+                id="hero"
+                class="relative min-h-screen flex items-center justify-center overflow-hidden"
+            >
+                <!-- Parallax Background Layer -->
+                <div
+                    id="hero-background"
+                    class="textured-bg-layer absolute inset-0 w-full h-full z-0"
+                ></div>
+                <!-- Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-[var(--background)] to-transparent z-1"
+                ></div>
+
+                <div class="relative z-10 text-center text-white px-4">
+                    <div
+                        class="mx-auto mb-6 h-24 w-24 text-[var(--primary)]"
+                        data-aos="zoom-in"
+                        data-aos-duration="1000"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 100 120"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M50 115 C 52 110, 52 105, 50 100" />
+                            <circle
+                                cx="50"
+                                cy="95"
+                                r="1.5"
+                                fill="currentColor"
+                                stroke="none"
+                            />
+                            <circle
+                                cx="50"
+                                cy="90"
+                                r="1.5"
+                                fill="currentColor"
+                                stroke="none"
+                            />
+                            <circle
+                                cx="50"
+                                cy="85"
+                                r="1.5"
+                                fill="currentColor"
+                                stroke="none"
+                            />
+                            <circle cx="50" cy="50" r="40" />
+                            <circle cx="50" cy="50" r="35" />
+                            <circle cx="50" cy="50" r="8" />
+                            <path
+                                d="M50 10 L50 25 M90 50 L75 50 M50 90 L50 75 M10 50 L25 50"
+                            />
+                            <path
+                                d="M50,18 C 65,30 65,70 50,82 C 35,70 35,30 50,18 Z"
+                            />
+                            <path
+                                d="M18,50 C 30,35 70,35 82,50 C 70,65 30,65 18,50 Z"
+                            />
+                        </svg>
+                    </div>
+
+                    <h1
+                        class="font-[var(--font-serif)] text-6xl md:text-8xl font-semibold tracking-wider text-[var(--primary)] uppercase"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        Heritage
+                    </h1>
+                    <p
+                        class="mt-4 font-[var(--font-serif)] text-base md:text-lg tracking-widest text-gray-300 uppercase"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                    >
+                        By Standard Gold Exchange
+                    </p>
+                    <p
+                        class="mt-2 font-[var(--font-serif)] text-xl md:text-2xl text-[var(--primary)] italic"
+                        data-aos="fade-up"
+                        data-aos-delay="500"
+                    >
+                        Honoring Nepali Heritage
+                    </p>
+                    <p
+                        class="mt-8 font-[var(--font-serif)] text-sm tracking-widest text-gray-400 uppercase"
+                        data-aos="fade-up"
+                        data-aos-delay="600"
+                    >
+                        Coming Soon to the UK
+                    </p>
+
+                    <a
+                        href="#legacy"
+                        class="inline-block mt-10 px-10 py-3 font-[var(--font-serif)] text-lg tracking-wider bg-[var(--primary)] text-[var(--primary-foreground)] border border-[var(--primary)] hover:bg-transparent hover:text-[var(--primary)] transition-colors duration-300"
+                        data-aos="fade-up"
+                        data-aos-delay="700"
+                    >
+                        Explore Our Legacy
+                    </a>
+                </div>
+            </section>
+
+            <!-- SECTION 1: OUR LEGACY -->
+            <section
+                id="legacy"
+                class="py-20 md:py-32 bg-[var(--background)] overflow-hidden"
+            >
+                <div class="max-w-screen-xl mx-auto px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center"
+                    >
+                        <div class="order-2 lg:order-1" data-aos="fade-right">
+                            <h2
+                                class="font-[var(--font-serif)] text-4xl md:text-5xl text-[var(--primary)] leading-tight"
+                            >
+                                Rooted in History. Forged in Gold.
+                            </h2>
+                            <div
+                                class="mt-6 space-y-4 max-w-prose text-lg text-[var(--foreground)]/80 leading-relaxed"
+                            >
+                                <p>
+                                    For over five generations, our family has
+                                    carried the ancient craft of Nepali
+                                    jewelry-making—an unbroken tradition of
+                                    excellence that traces back over 150
+                                    years...
+                                </p>
+                                <p>
+                                    From the royal courts of Kathmandu to sacred
+                                    festivals across the hills and valleys, our
+                                    creations have adorned Nepal’s proudest
+                                    moments...
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="order-1 lg:order-2 space-y-6"
+                            data-aos="fade-left"
+                        >
+                            <div
+                                class="w-full aspect-video bg-[var(--muted)] flex items-center justify-center text-[var(--muted-foreground)] border border-[var(--border)]"
+                            >
+                                <div class="text-center p-4">
+                                    <p class="font-bold">
+                                        [Placeholder for Sepia Workshop Image]
+                                    </p>
+                                    <p class="text-sm mt-1">
+                                        Third Generation, Kathmandu, 1952
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full aspect-video bg-[var(--muted)] flex items-center justify-center text-[var(--muted-foreground)] border border-[var(--border)]"
+                            >
+                                <div class="text-center p-4">
+                                    <p class="font-bold">
+                                        [Placeholder for Old Receipt/Stamp]
+                                    </p>
+                                    <p class="text-sm mt-1">
+                                        Heritage Evidence – Documented in local
+                                        trade archives
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: THE VISIONARY -->
+            <section
+                id="visionary"
+                class="py-20 md:py-32 bg-[var(--secondary)] overflow-hidden"
+            >
+                <div class="max-w-screen-xl mx-auto px-6 lg:px-8">
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center"
+                    >
+                        <div class="space-y-6" data-aos="fade-right">
+                            <div
+                                class="w-full aspect-square max-w-md mx-auto lg:mx-0 bg-[var(--muted)] flex items-center justify-center text-[var(--muted-foreground)] border border-[var(--border)]"
+                            >
+                                <div class="text-center p-4">
+                                    <p class="font-bold">
+                                        [Portrait of Pranav]
+                                    </p>
+                                    <p class="text-sm mt-1">
+                                        Founder, Heritage by Standard Gold
+                                        Exchange
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="w-full aspect-[4/1] max-w-md mx-auto lg:mx-0 bg-[var(--muted)] flex items-center justify-center text-[var(--muted-foreground)] border border-[var(--border)]"
+                            >
+                                <div class="text-center p-4">
+                                    <p class="font-bold">
+                                        [Logo of Standard Gold Exchange]
+                                    </p>
+                                    <p class="text-sm mt-1">
+                                        Trusted by thousands across Nepal.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left">
+                            <h2
+                                class="font-[var(--font-serif)] text-4xl md:text-5xl text-[var(--primary)] leading-tight"
+                            >
+                                A New Generation. A New Chapter.
+                            </h2>
+                            <div
+                                class="mt-6 space-y-4 max-w-prose text-lg text-[var(--foreground)]/80 leading-relaxed"
+                            >
+                                <p>
+                                    I'm Pranav Man Shrestha, a young
+                                    entrepreneur and custodian of my family’s
+                                    gold legacy...
+                                </p>
+                                <p>
+                                    Now, I’m bringing my expertise and our
+                                    family’s craftsmanship to the UK, through
+                                    Heritage...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BRAND STORY SECTION -->
+            <section
+                id="story"
+                class="py-20 md:py-32 bg-[var(--background)] overflow-hidden"
+            >
+                <div
+                    class="max-w-3xl mx-auto px-6 lg:px-8 text-center"
+                    data-aos="fade-up"
+                >
+                    <h3
+                        class="font-[var(--font-serif)] text-2xl text-[var(--primary)]/80 tracking-widest uppercase"
+                    >
+                        An Ode to Legacy
+                    </h3>
+                    <h2
+                        class="mt-4 font-[var(--font-serif)] text-4xl md:text-5xl text-[var(--primary)] leading-tight"
+                    >
+                        A Testament to Time
+                    </h2>
+                    <div
+                        class="mt-8 text-left max-w-prose mx-auto text-lg text-[var(--foreground)]/80 leading-relaxed space-y-6 border-t border-[var(--border)] pt-8"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <p>
+                            This showroom stands not merely as a space of
+                            commerce, but as a sanctuary of heritage...
+                        </p>
+                        <p>
+                            At the heart of this legacy stands Narendra Man
+                            Shrestha, a name spoken with admiration and
+                            reverence...
+                        </p>
+                        <p>
+                            Heritage honors this spirit—of giving, of artistry,
+                            of grandeur—and redefines it for a new generation...
+                        </p>
+                        <p
+                            class="font-[var(--font-serif)] text-2xl text-center italic text-[var(--primary)] pt-4"
+                        >
+                            This is more than jewelry. This is our history,
+                            engraved in gold.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: OUR CRAFT -->
+            <section
+                id="craft"
+                class="py-20 md:py-32 bg-[var(--secondary)] overflow-hidden"
+            >
+                <div class="max-w-screen-xl mx-auto px-6 lg:px-8">
+                    <div
+                        class="max-w-3xl mx-auto text-center"
+                        data-aos="fade-up"
+                    >
+                        <h2
+                            class="font-[var(--font-serif)] text-4xl md:text-5xl text-[var(--primary)] leading-tight"
+                        >
+                            Jewelry That Honors the Past and Embraces the
+                            Present
+                        </h2>
+                        <p
+                            class="mt-6 max-w-prose mx-auto text-lg text-[var(--foreground)]/80 leading-relaxed"
+                        >
+                            At Heritage, we design for two worlds: the avid
+                            connoisseur of traditional Nepali artistry and the
+                            modern minimalist...
+                        </p>
+                    </div>
+
+                    <div
+                        class="mt-16 text-center text-[var(--muted-foreground)]"
+                    >
+                        <p class="font-bold" data-aos="fade-up">
+                            [Placeholder for Jewelry Carousel]
+                        </p>
+                        <div
+                            class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+                        >
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="100"
+                                class="aspect-square bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Traditional
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                                class="aspect-square bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Temple-Inspired
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                class="aspect-square bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Modern
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="400"
+                                class="aspect-square bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Fusion
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-16 text-center text-[var(--muted-foreground)]"
+                    >
+                        <p class="font-bold" data-aos="fade-up">
+                            [Placeholder for Craftsmanship Details]
+                        </p>
+                        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="100"
+                                class="aspect-video bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Filigree Work
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="200"
+                                class="aspect-video bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Gemstone Setting
+                            </div>
+                            <div
+                                data-aos="fade-up"
+                                data-aos-delay="300"
+                                class="aspect-video bg-[var(--muted)] border border-[var(--border)] flex items-center justify-center p-4"
+                            >
+                                Hallmarking
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: COMING SOON -->
+            <section
+                id="coming-soon"
+                class="py-20 md:py-32 bg-[var(--background)] overflow-hidden"
+            >
+                <div
+                    class="max-w-3xl mx-auto px-6 lg:px-8 text-center"
+                    data-aos="fade-up"
+                >
+                    <h2
+                        class="font-[var(--font-serif)] text-4xl md:text-5xl text-[var(--primary)] leading-tight"
+                    >
+                        Launching Soon in the UK
+                    </h2>
+                    <p
+                        class="mt-6 max-w-prose mx-auto text-lg text-[var(--foreground)]/80 leading-relaxed"
+                    >
+                        We’re excited to open our first location in the
+                        UK—bringing authentic, ethically crafted Nepali jewelry
+                        to new generations of gold lovers across the world.
+                    </p>
+
+                    <form
+                        class="mt-12 max-w-lg mx-auto"
+                        data-aos="fade-up"
+                        data-aos-delay="200"
+                    >
+                        <label
+                            for="email"
+                            class="font-[var(--font-serif)] text-2xl text-[var(--primary)]"
+                            >Be the first to know.</label
+                        >
+                        <div class="mt-4 flex flex-col sm:flex-row gap-4">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                class="w-full px-4 py-3 bg-transparent border border-[var(--border)] text-[var(--foreground)] placeholder:text-[var(--muted-foreground)] focus:ring-2 focus:ring-[var(--ring)] focus:outline-none transition-all"
+                            />
+                            <button
+                                type="submit"
+                                class="px-8 py-3 font-[var(--font-serif)] text-lg tracking-wider bg-[var(--primary)] text-[var(--primary-foreground)] border border-[var(--primary)] hover:bg-transparent hover:text-[var(--primary)] transition-colors duration-300"
+                            >
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-[var(--secondary)] py-8">
+            <div
+                class="max-w-screen-xl mx-auto px-6 lg:px-8 text-center text-[var(--muted-foreground)]"
+            >
+                <p
+                    class="font-[var(--font-serif)] text-lg text-[var(--primary)]"
+                >
+                    HERITAGE
+                </p>
+                <p class="text-sm">By Standard Gold Exchange</p>
+                <p class="text-xs mt-4">
+                    © 2024 Heritage. All Rights Reserved. A brand by Standard
+                    Gold Exchange.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Animate On Scroll (AOS) JS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            // Initialize AOS with settings for a subtle, one-time animation
+            AOS.init({
+                duration: 800, // Animation duration in milliseconds
+                once: true, // Whether animation should happen only once - while scrolling down
+                offset: 100, // Offset (in px) from the original trigger point
+            });
+
+            // Simple Parallax Effect for Hero Background
+            window.addEventListener("scroll", function () {
+                const heroBg = document.getElementById("hero-background");
+                // Move the background up at half the scroll speed.
+                // Using a smaller multiplier (e.g., 0.3) creates a more subtle effect.
+                const scrollValue = window.scrollY;
+                if (heroBg) {
+                    heroBg.style.transform = `translateY(${scrollValue * 0.4}px)`;
+                }
+            });
+        </script>
+    </body>
+</html>
